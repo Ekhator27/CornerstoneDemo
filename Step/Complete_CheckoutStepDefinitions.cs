@@ -46,7 +46,7 @@ namespace CornerstoneDemo
         [Given(@"User Enter valid email '(.*)' click yes and continue")]
         public void GivenUserEnterValidEmailClickYesAndContinue(string email)
         {
-            customerpage.enterCustomerInfo(email);
+            customerpage.enterCustomerInfo(string.Format(email, new Random().Next(0, 100)));
         }
 
         [Given(@"I enter the following Shipping Address")]

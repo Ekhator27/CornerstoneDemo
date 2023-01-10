@@ -27,9 +27,10 @@ namespace CornerstoneDemo
 
         public static IWebElement WaitForElementClickable(this IWebDriver driver, By element)
         {
+            ScrollToElement(driver, driver.FindElement(element), "true");
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30))
             {
-                PollingInterval = TimeSpan.FromSeconds(3),
+                PollingInterval = TimeSpan.FromSeconds(10),
                 Timeout = TimeSpan.FromSeconds(30)
             };
             wait.IgnoreExceptionTypes(typeof(NoSuchElementException));

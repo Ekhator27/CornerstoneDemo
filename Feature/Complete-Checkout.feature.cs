@@ -122,7 +122,7 @@ this.FeatureBackground();
  testRunner.And("I click on view or edit your cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
- testRunner.And("User Enter valid email \'ekhatordestiny9@gmail.com\' click yes and continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("User Enter valid email \'ekhatordestiny990{0}@gmail.com\' click yes and continue", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Country",

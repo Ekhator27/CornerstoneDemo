@@ -35,12 +35,14 @@ namespace CornerstoneDemo.Pages
             driver.FindElement(Postalcode).SendKeys(postalcode);
             driver.FindElement(Phonenumber).SendKeys(phonenumber);
             driver.WaitForElement(FlatRate).Text.Equals(10);
-            driver.ScrollToElement(driver.FindElement(Continue),
+            try
+            {
+                driver.ScrollToElement(driver.FindElement(Continue),
                 "true");
-            driver.WaitForElementClickable(Continue).Click();
-            //driver.ClickByJs(driver.FindElement(Continue));
+                driver.WaitForElementClickable(Continue).Click();
+            }
+            catch (Exception){ throw;}
         }
-        
     }
 }
 

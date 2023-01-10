@@ -26,9 +26,13 @@ namespace CornerstoneDemo.Pages
             driver.FindElement(Expiration).SendKeys(expiration);
             driver.FindElement(NameonCard).SendKeys(nameonCard);
             driver.FindElement(CVV).SendKeys(cvv);
-            driver.ScrollToElement(driver.WaitForElement(PlaceOrder),
+            try
+            {
+                driver.ScrollToElement(driver.WaitForElement(PlaceOrder),
                 "true");
-            driver.WaitForElementClickable(PlaceOrder).Click();
+                driver.WaitForElementClickable(PlaceOrder).Click();
+            }
+            catch (Exception){throw;}
         }
 
     }
