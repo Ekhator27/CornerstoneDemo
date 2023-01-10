@@ -21,6 +21,7 @@ namespace CornerstoneDemo.Pages
             {
                 driver.WaitForElement(Customeremail);
                 driver.WaitForElement(Customeremail).SendKeys(value);
+                //driver.EntertextViaJs(Customeremail, string.Format(value + new Random().Next(1, 1000)));
                 driver.ClickByJs(driver.FindElement(PrivacyPolicy));
                 Console.WriteLine(driver.WindowHandles);
                 var count = driver.WindowHandles.Count;

@@ -19,7 +19,6 @@ namespace CornerstoneDemo.Pages
         public bool IsConfirmationPageDisplayed() => driver.WaitForElement(OrderConfirmation).Displayed;
         public void continueToShopping()
         {
-            //driver.WaitForElement(ContinueToShopping).Click();
             driver.WaitForElementClickable((ContinueToShopping)).Click();
         }
     }

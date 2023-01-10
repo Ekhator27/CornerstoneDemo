@@ -10,7 +10,7 @@ Background:
 Scenario: Searches for a product and Completes the checkout
     And I Searches product Openhouse and click add to cart button
 	And I click on view or edit your cart
-	And User Enter valid email 'ekhatordestiny1100@gmail.com' click yes and continue
+	And User Enter valid email 'ekhatordestiny9@gmail.com' click yes and continue
 	And I enter the following Shipping Address
 	| Country        | FirstName | LastName | Address        | City        | PostalCode | PhoneNumber |
 	| United Kingdom | Destiny   | Barry    | 69 Bath street | Southampton | SO14 0DG   | 07708481599 |
@@ -19,26 +19,3 @@ Scenario: Searches for a product and Completes the checkout
 	| 4111 1111 1111 1111 | 10/25      | D Sam      | 123 |
 	Then I am presented with a purchase confirmation page for my order
 
-
-
-
-
-
-
-
-
-
-
-
-#Scenario Outline: Selenium automation task c
-#	Given I Navigate to automationpractice website
-#	And I Scroll down to hover on blouse and click add to cart button
-#	When I Click proceed to checkout button
-#	Then Validate that you can see 'SHOPPING-CART SUMMARY' displayed on the page
-#	Then Validate under discription that item selection is 'Blouse'
-#	And Validate that Qty is equal to 1
-#	And Validate the following are displayed <products>, <shipping>, <total>, <tax> 
-#	Examples: 
-#	| products | shipping | total | tax  |
-#	| 27.00    | 2.00     | 29.00 | 0.00 |
-#	| 27.00    | 2.00     | 29.00 | 0.00 |

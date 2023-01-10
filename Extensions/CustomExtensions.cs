@@ -7,15 +7,11 @@ namespace CornerstoneDemo
 {
     public static class CustomExtensions
     {
-        public static bool WaitForDisplay(this IWebDriver driver, IWebElement element)
+
+        public static void EntertextViaJs(this IWebDriver driver, By element, string value)
         {
-            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30))
-            {
-                PollingInterval = TimeSpan.FromSeconds(3),
-                Timeout = TimeSpan.FromSeconds(30)
-            };
-            wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
-            return wait.Until(x => element).Displayed;
+            Thread.Sleep(TimeSpan.FromSeconds(3));
+            ((IJavaScriptExecutor)driver).ExecuteScript($" return document.getElementsByName('{element}')[0].value = '{value}';");
         }
 
         public static IWebElement WaitForElement(this IWebDriver driver, By element)
