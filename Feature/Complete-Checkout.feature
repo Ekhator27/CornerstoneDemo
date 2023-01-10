@@ -10,7 +10,7 @@ Background:
 Scenario: Searches for a product and Completes the checkout
     And I Searches product Openhouse and click add to cart button
 	And I click on view or edit your cart
-	And User Enter valid email 'ekhatordestiny9@gmail.com' click yes and continue
+	And User Enter valid email 'ekhatordestiny990@gmail.com' click yes and continue
 	And I enter the following Shipping Address
 	| Country        | FirstName | LastName | Address        | City        | PostalCode | PhoneNumber |
 	| United Kingdom | Destiny   | Barry    | 69 Bath street | Southampton | SO14 0DG   | 07708481599 |
